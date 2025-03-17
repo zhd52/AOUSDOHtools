@@ -1,0 +1,134 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# AOUSDOHtools
+
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/zhd52/AOUSDOHtools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zhd52/AOUSDOHtools/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+## Overview
+
+`AOUSDOHtools` is an R package designed to process and analyze **Social Determinants of Health (SDOH)** Survey data from the ***All of Us (AOU)*** Research Program (<https://www.researchallofus.org/>). It provides tools to streamline common survey data tasks, including recoding, score calculation, and variable creation. The package is ideal for researchers and analysts working with SDOH survey data within the All of Us Research Hub Researcher Workbench, a cloud-based platform supporting AOU data analysis (<https://www.researchallofus.org/data-tools/survey-explorer/>).
+
+This package is developed in conjunction with a published user guide:
+
+-   Theresa A Koleck, Caitlin Dreisbach, Chen Zhang, Susan Grayson, Maichou Lor, Zhirui Deng, Alex Conway, Peter D R Higgins, Suzanne Bakken, *User guide for Social Determinants of Health Survey data in the All of Us Research Program*, Journal of the American Medical Informatics Association, Volume 31, Issue 12, December 2024, Pages 3032–3041, <https://doi.org/10.1093/jamia/ocae214>.
+
+The package enables users to calculate health and well-being scores for 14 key social determinants of health constructs assessed in the *All of Us* Social Determinants of Health Survey (AOUSDOH).
+
+**Supported Constructs and Functions**
+
+1.  **Neighborhood Cohesion** - `calc_cohesion`
+
+2.  **Neighborhood Disorder** - `calc_disorder`, `calc_physical_disorder`, `calc_social_disorder`
+
+3.  **Neighborhood Environment** - `calc_density`, `calc_spa`, `calc_crime_safety`, `calc_nei`
+
+4.  **Social Support** - `calc_social_support`, `calc_ins_support`, `calc_emo_support`
+
+5.  **Loneliness** - `calc_loneliness`
+
+6.  **Perceived Everyday Discrimination** - `calc_edd_situation`, `calc_edd_frequency`, `calc_edd_chronicity`
+
+7.  **Perceived Discrimination in Health Care Settings** - `calc_hcd_ever`, `calc_hcd_count`, `calc_hcd_sum`, `calc_hcd_mean`
+
+8.  **Food Insecurity** - `calc_food_insecurity`
+
+9.  **Housing Insecurity / Instability** - `calc_housing_insecurity`, `calc_num_moves`
+
+10. **Housing Quality** - `calc_housing_quality`
+
+11. **Perceived Stress** - `calc_stress_sum`, `calc_stress_category`
+
+12. **Daily Spiritual Experiences** - `calc_spirit`
+
+13. **Religious Service Attendance** - `calc_religious_attendance`
+
+14. **English Proficiency** - `calc_other_language`, `calc_english_level`, `calc_english_proficient`
+
+This package simplifies data processing for AOU researchers, ensuring consistent, reproducible analyses of SDOH factors.
+
+## Installation
+
+You can install the development version of `AOUSDOHtools` from GitHub using the following steps:
+
+```{r installation, eval=F}
+# Install devtools if necessary
+install.packages("devtools")
+
+# Install AOUSDOHtools from GitHub
+devtools::install_github("zhd52/AOUSDOHtools")
+```
+
+## Example
+
+Once installed, you can use the package by loading it into your R session:
+
+```{r example}
+library(AOUSDOHtools)
+
+# Example: Calculating Neighborhood Cohesion Score
+
+## Create a sample survey data frame
+survey_df <- data.frame(
+  person_id = c(1, 1, 1, 1, 2, 2, 2, 2),
+  question_concept_id = c(40192463, 40192411, 40192499, 40192417,
+                          40192463, 40192411, 40192499, 40192417),
+  answer_concept_id = c(40192514, 40192455, 40192524, 40192408,
+                        40192514, 40192455, 40192422, 40192408)
+  )
+
+## Compute neighborhood cohesion scores
+cohesion_scores <- calc_cohesion(survey_df)
+head(cohesion_scores)
+```
+
+## Merge
+
+After computing all the scores, you can merge the resulting scores using this code: 
+
+```{r merge, eval=F}
+# Merge the computed scores together
+
+## Create a list for all the scores
+scores.list <- list(
+  cohesion_scores,                                                       ### Neighborhood Cohesion
+  disorder_scores, physical_disorder_scores, social_disorder_scores,     ### Neighborhood Disorder 
+  density_scores, spa_scores, crime_safety_scores, nei_scores,           ### Neighborhood Environment
+  social_support_scores, ins_support_scores, emo_support_scores,         ### Social Support 
+  loneliness_scores,                                                     ### Loneliness
+  edd_situation_scores, edd_frequency_scores, edd_chronicity_scores,     ### Perceived Everyday Discrimination
+  hcd_ever_scores, hcd_count_scores, hcd_sum_scores, hcd_mean_scores,    ### Perceived Discrimination in Health Care Settings
+  food_insecurity_scores,                                                ### Food Insecurity
+  housing_insecurity_scores, num_moves_scores,                           ### Housing Insecurity / Instability
+  housing_quality_scores,                                                ### Housing Quality
+  stress_sum_scores, stress_category_scores,                             ### Perceived Stress
+  spirit_scores,                                                         ### Daily Spiritual Experiences
+  religious_attendance_scores,                                           ### Religious Service Attendance
+  other_language_scores, english_level_scores, english_proficient_scores ### English Proficiency
+)
+
+## Merge the scores
+SDOH_scores <- reduce(scores.list, full_join, by = 'person_id')
+head(SDOH_scores)
+```
+
+
+
+
+
+
