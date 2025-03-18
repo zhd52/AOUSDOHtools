@@ -1,7 +1,7 @@
 Package: AOUSDOHtools
 Type: Package
 Title: Tools for Analyzing AOU SDOH Survey Data
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: person(given = "Zhirui",
                   family = "Deng",
                   role = c("aut", "cre"),

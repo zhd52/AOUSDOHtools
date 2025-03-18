@@ -2,8 +2,8 @@
 
 ## Package Information
 - Package name: AOUSDOHtools
-- Version: 1.0.0
-- Submission type: New submission
+- Version: 1.0.1
+- Submission type: Resubmission (Deleted a redundant row in the DESCRIPTION file. No functional changes.)
 
 ## Test Environments
 - Local: R 4.3.3, Windows 11 x64
