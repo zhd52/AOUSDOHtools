@@ -1,15 +1,15 @@
 Package: AOUSDOHtools
 Type: Package
 Title: Analyzing AOU SDOH Survey Data
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: person("Zhirui", "Deng", email = "zhd52@pitt.edu", 
     role = c("aut", "cre"))
-Description: This package provides functions for processing and analyzing survey 
-    data from the All of Us Social Determinants of Health (AOUSDOH) program. It 
-    includes tools for calculating health and well-being scores, recoding 
-    variables, and simplifying survey data analysis. For more details see - 
-    Koleck TA, Dreisbach C, Zhang C, Grayson S, Lor M, Deng Z, Conway A, Higgins 
-    PDR, Bakken S (2024) <doi:10.1093/jamia/ocae214>.
+Description: Functions for processing and analyzing survey data from the All of 
+    Us Social Determinants of Health (AOUSDOH) program, including tools for 
+    calculating health and well-being scores, recoding variables, and simplifying 
+    survey data analysis. For more details see - Koleck TA, Dreisbach C, Zhang C, 
+    Grayson S, Lor M, Deng Z, Conway A, Higgins PDR, Bakken S (2024) 
+    <doi:10.1093/jamia/ocae214>.
 License: MIT + file LICENSE 
 Encoding: UTF-8
 LazyData: true
