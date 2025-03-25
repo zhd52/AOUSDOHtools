@@ -2,7 +2,7 @@
 
 ## Package Information
 - Package name: AOUSDOHtools
-- Version: 1.0.3
+- Version: 1.0.4
 - Submission type: Resubmission (Modified DESCRIPTION accordingly. No functional changes.)
 
 ## Test Environments

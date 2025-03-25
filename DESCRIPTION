@@ -1,9 +1,14 @@
 Package: AOUSDOHtools
 Type: Package
 Title: Analyzing AOU SDOH Survey Data
-Version: 1.0.3
-Authors@R: person("Zhirui", "Deng", email = "zhd52@pitt.edu", 
-    role = c("aut", "cre"))
+Version: 1.0.4
+Authors@R: c(
+    person("Zhirui", "Deng", email = "zhd52@pitt.edu", role = c("aut", "cre")),
+    person("Theresa A.", "Koleck", role = "ctb"),
+    person("Caitlin", "Dreisbach", role = "ctb"),
+    person("Chen", "Zhang", role = "ctb"),
+    person("Peter D.R.", "Higgins", role = "ctb"),
+    person("DreisbachLab", role = "cph"))
 Description: Functions for processing and analyzing survey data from the All of 
     Us Social Determinants of Health (AOUSDOH) program, including tools for 
     calculating health and well-being scores, recoding variables, and simplifying 
