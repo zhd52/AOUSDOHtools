@@ -75,15 +75,20 @@ consistent, reproducible analyses of SDOH factors.
 
 ## Installation
 
-You can install the development version of `AOUSDOHtools` from GitHub
-using the following steps:
+You can install the published version of `AOUSDOHtools` from CRAN, or
+the development version from GitHub, using the following steps:
 
 ``` r
-# Install devtools if necessary
-install.packages("devtools")
+# Install AOUSDOHtools from CRAN
+install.packages("AOUSDOHtools")
 
 # Install AOUSDOHtools from GitHub
 devtools::install_github("zhd52/AOUSDOHtools")
+## Install devtools if necessary
+install.packages("devtools")
+
+# Confirm the installation
+library(AOUSDOHtools)
 ```
 
 ## Example
