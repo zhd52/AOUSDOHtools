@@ -18,7 +18,12 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/zhd52/AOUSDOHtools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zhd52/AOUSDOHtools/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
+
+```{r, echo=FALSE, out.width="30%", fig.align="center"}
+knitr::include_graphics("man/figures/Hex Sticker.jpg")
+```
 
 ## Overview
 
@@ -104,7 +109,7 @@ head(cohesion_scores)
 
 ## Merge
 
-After computing all the scores, you can merge the resulting scores using this code: 
+After computing all the scores, you can merge the resulting scores using this code:
 
 ```{r merge, eval=F}
 # Merge the computed scores together
@@ -131,9 +136,3 @@ scores.list <- list(
 SDOH_scores <- reduce(scores.list, full_join, by = 'person_id')
 head(SDOH_scores)
 ```
-
-
-
-
-
-
