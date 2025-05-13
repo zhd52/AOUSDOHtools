@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 ```{r, echo=FALSE, out.width="30%", fig.align="center"}
-knitr::include_graphics("man/figures/Hex Sticker.jpg")
+knitr::include_graphics("man/figures/Hex_Sticker.jpg")
 ```
 
 ## Overview

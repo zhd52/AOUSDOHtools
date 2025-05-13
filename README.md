@@ -1,3 +1,8 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -9,7 +14,7 @@
 
 <!-- badges: end -->
 
-<img src="man/figures/Hex Sticker.jpg" width="30%" style="display: block; margin: auto;" />
+<img src="man/figures/Hex_Sticker.jpg" width="30%" style="display: block; margin: auto;"/>
 
 ## Overview
 
@@ -25,12 +30,12 @@ supporting AOU data analysis
 
 This package is developed in conjunction with a published user guide:
 
-- Theresa A Koleck, Caitlin Dreisbach, Chen Zhang, Susan Grayson,
-  Maichou Lor, Zhirui Deng, Alex Conway, Peter D R Higgins, Suzanne
-  Bakken, *User guide for Social Determinants of Health Survey data in
-  the All of Us Research Program*, Journal of the American Medical
-  Informatics Association, Volume 31, Issue 12, December 2024, Pages
-  3032–3041, <https://doi.org/10.1093/jamia/ocae214>.
+-   Theresa A Koleck, Caitlin Dreisbach, Chen Zhang, Susan Grayson,
+    Maichou Lor, Zhirui Deng, Alex Conway, Peter D R Higgins, Suzanne
+    Bakken, *User guide for Social Determinants of Health Survey data in
+    the All of Us Research Program*, Journal of the American Medical
+    Informatics Association, Volume 31, Issue 12, December 2024, Pages
+    3032–3041, <https://doi.org/10.1093/jamia/ocae214>.
 
 The package enables users to calculate health and well-being scores for
 14 key social determinants of health constructs assessed in the *All of
