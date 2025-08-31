@@ -28,6 +28,8 @@ affiliations:
     index: 3
   - name: Goergen Institute for Data Science, University of Rochester, Rochester, NY, USA
     index: 4
+date: 31 August 2025
+bibliography: paper.bib
 ---
 
 # **Summary**
