@@ -88,12 +88,14 @@ the development version from GitHub, using the following steps:
 
 ``` r
 # Install AOUSDOHtools from CRAN
-install.packages("AOUSDOHtools", "purrr", "dplyr")
+install.packages("AOUSDOHtools")
 
 # Install AOUSDOHtools from GitHub
 devtools::install_github("zhd52/AOUSDOHtools")
+
 ## Install devtools if necessary
 install.packages("devtools")
+
 ## If necessary, install dependencies for merging tables
 install.packages("purrr", "dplyr")
 
