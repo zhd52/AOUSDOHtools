@@ -88,15 +88,19 @@ the development version from GitHub, using the following steps:
 
 ``` r
 # Install AOUSDOHtools from CRAN
-install.packages("AOUSDOHtools")
+install.packages("AOUSDOHtools", "purrr", "dplyr")
 
 # Install AOUSDOHtools from GitHub
 devtools::install_github("zhd52/AOUSDOHtools")
 ## Install devtools if necessary
 install.packages("devtools")
+## If necessary, install dependencies for merging tables
+install.packages("purrr", "dplyr")
 
 # Confirm the installation
 library(AOUSDOHtools)
+library(purrr)
+library(dplyr)
 ```
 
 ## Example
@@ -106,6 +110,8 @@ session:
 
 ``` r
 library(AOUSDOHtools)
+library(purrr)
+library(dplyr)
 
 # Example: Calculating Neighborhood Cohesion Score
 
