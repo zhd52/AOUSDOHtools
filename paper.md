@@ -30,6 +30,8 @@ affiliations:
     index: 4
 date: 31 August 2025
 bibliography: paper.bib
+csl: apa.csl
+journal: JOSS
 ---
 
 # **Summary**
@@ -220,5 +222,3 @@ We are grateful to the Comprehensive R Archive Network (CRAN) team for maintaini
 The authors declare that they have no conflicts of interest related to this work.
 
 # **References**
-
-See `paper.bib`.
