@@ -40,7 +40,8 @@ journal: JOSS
 
 The package is designed for use within the *All of Us* Researcher Workbench, a secure cloud-based platform where the de-identified data are accessed and analyzed. The package is compatible with both Jupyter and RStudio environments hosted on the platform. `AOUSDOHtools` automates the data cleaning, recoding, scoring, and variable construction, which enables researchers to generate interpretable SDOH scores for downstream analysis.
 
-The package is openly developed and maintained on GitHub and available through CRAN (cran.r-project.org/package=AOUSDOHtools) and GitHub (github.com/zhd52/AOUSDOHtools). It is intended to facilitate equitable and scalable research by making complex SDOH survey data accessible and analysis-ready for approved researchers working within the *All of Us* ecosystem.
+The package is openly developed and maintained on GitHub and available through CRAN ([cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) and GitHub ([github.com/zhd52/AOUSDOHtools](https://github.com/zhd52/AOUSDOHtools)). It is intended to facilitate equitable and scalable research by making complex SDOH survey data accessible and analysis-ready for approved researchers working within the *All of Us* ecosystem.
+
 
 -   **Figure 0:** `AOUSDOHtools` hex sticker. Created with R package `hexSticker` [@hexSticker2020].
 
@@ -48,21 +49,22 @@ The package is openly developed and maintained on GitHub and available through C
 
 ## ***All of Us (AOU)***
 
-The *All of Us* Research Program (allofus.nih.gov), led by the National Institutes of Health, aims to create a large and diverse health database by enrolling over one million participants across the United States. The program supports research focused on individualized prevention, diagnosis, and treatment [@AllOfUsNIH2025].
+The *All of Us* Research Program ([allofus.nih.gov](https://www.allofus.nih.gov)), led by the National Institutes of Health, aims to create a large and diverse health database by enrolling over one million participants across the United States. The program supports research focused on individualized prevention, diagnosis, and treatment [@AllOfUsNIH2025].
 
-Participants provide data through self-reported surveys, electronic health records (EHR), physical measurements, wearable devices (e.g. FitBit), and biospecimen collection (e.g. urine and blood specimens), made available to approved researchers via the secure cloud-based Researcher Workbench (researchallofus.org) [@AllOfUsNEJM2019]. A major strength of *All of Us* is its explicit focus on health equity, particularly through the inclusion of historically underrepresented populations in biomedical research [@AllOfUsNIH2025].
+Participants provide data through self-reported surveys, electronic health records (EHR), physical measurements, wearable devices (e.g. FitBit), and biospecimen collection (e.g. urine and blood specimens), made available to approved researchers via the secure cloud-based Researcher Workbench ([researchallofus.org](https://www.researchallofus.org)) [@AllOfUsNEJM2019]. A major strength of *All of Us* is its explicit focus on health equity, particularly through the inclusion of historically underrepresented populations in biomedical research [@AllOfUsNIH2025].
+
 
 Despite these strengths, the complexity of the available data, especially the survey components, can present analytic challenges. Standardized and scalable tools are needed to support consistent data processing and analysis, but such tools are not included in the platform by default [@Grayson2022].
 
 ## **Social Determinants of Health (SDOH) Survey**
 
-Social Determinants of Health (SDOH) refer to non-medical conditions like housing, discrimination, and education that significantly impact individual and population health outcomes [@ODPHP2025]. SDOH factors are strongly associated with health disparities and inequities across racial, geographic, and economic lines [@Williams2009]. The *All of Us* SDOH Survey (researchallofus.org/data-tools/survey-explorer) captures diverse life domains relevant to these determinants [@SurveyExplorer2025]. While rich, the data are disaggregated, complex, and not readily suitable for analysis without preprocessing and scoring.
+Social Determinants of Health (SDOH) refer to non-medical conditions like housing, discrimination, and education that significantly impact individual and population health outcomes [@ODPHP2025]. SDOH factors are strongly associated with health disparities and inequities across racial, geographic, and economic lines [@Williams2009]. The *All of Us* SDOH Survey ([researchallofus.org/data-tools/survey-explorer](https://www.researchallofus.org/data-tools/survey-explorer)) captures diverse life domains relevant to these determinants [@SurveyExplorer2025]. While rich, the data are disaggregated, complex, and not readily suitable for analysis without preprocessing and scoring.
 
 Transforming survey responses into meaningful constructs for research, such as scoring neighborhood safety or perceived stress, benefits from structured tools. Without such tools, the reproducibility and consistency of analyses across studies are at risk.
 
 ## **Scoring Social Determinants of Health (SDOH) Constructs**
 
-The `AOUSDOHtools` R Package (@Deng2025; cran.r-project.org/package=AOUSDOHtools) was developed to address this gap in available tools by implementing literature-informed scoring logic for 14 well-defined SDOH constructs (***Figure 1***). `AOUSDOHtools` builds upon a user guide developed by @Koleck2024 and includes constructs such as Neighborhood Cohesion, Social Support, and Perceived Stress, each assessed using standardized instruments. Please see @Koleck2024 for definitions and descriptions of the SDOH constructs and source instrument information. A total of 30 functions for scoring are available. Six of the constructs have one scoring option. Eight of the constructs have multiple scoring options. `AOUSDOHtools` is intended for use exclusively within the *All of Us* Researcher Workbench [@AllOfUsWorkbench2025] (Jupyter or Rstudio), respecting privacy and data governance regulations.
+The `AOUSDOHtools` R Package (@Deng2025; [cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) was developed to address this gap in available tools by implementing literature-informed scoring logic for 14 well-defined SDOH constructs (***Figure 1***). `AOUSDOHtools` builds upon a user guide developed by @Koleck2024 and includes constructs such as Neighborhood Cohesion, Social Support, and Perceived Stress, each assessed using standardized instruments. Please see @Koleck2024 for definitions and descriptions of the SDOH constructs and source instrument information. A total of 30 functions for scoring are available. Six of the constructs have one scoring option. Eight of the constructs have multiple scoring options. `AOUSDOHtools` is intended for use exclusively within the *All of Us* Researcher Workbench [@AllOfUsWorkbench2025] (Jupyter or Rstudio), respecting privacy and data governance regulations.
 
 By automating scoring, recoding, and variable construction, `AOUSDOHtools` promotes reproducibility, reduces coding burden, and makes SDOH constructs more accessible to health equity researchers. It, thereby, accelerates scalable, equity-driven population health research.
 
@@ -70,7 +72,8 @@ By automating scoring, recoding, and variable construction, `AOUSDOHtools` promo
 
 # **Installation**
 
-The `AOUSDOHtools` package is available on CRAN (cran.r-project.org/package=AOUSDOHtools) and GitHub (github.com/zhd52/AOUSDOHtools). Users can install the stable release from CRAN or the development version from GitHub using the following commands in R [@Rcore2025; @devtools2022].
+The `AOUSDOHtools` package is available on CRAN ([cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) and GitHub ([github.com/zhd52/AOUSDOHtools](https://github.com/zhd52/AOUSDOHtools)). Users can install the stable release from CRAN or the development version from GitHub using the following commands in R [@Rcore2025; @devtools2022].
+
 
 -   Install from CRAN:
 
