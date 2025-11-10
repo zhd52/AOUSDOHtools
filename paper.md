@@ -42,7 +42,7 @@ The package is designed for use within the *All of Us* Researcher Workbench, a s
 
 The package is openly developed and maintained on GitHub and available through CRAN ([cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) and GitHub ([github.com/zhd52/AOUSDOHtools](https://github.com/zhd52/AOUSDOHtools)). It is intended to facilitate equitable and scalable research by making complex SDOH survey data accessible and analysis-ready for approved researchers working within the *All of Us* ecosystem.
 
-![**Figure 0.** `AOUSDOHtools` hex sticker. Created with R package `hexSticker` [@hexSticker2020].](figures/Hex_Sticker.jpg){width="258"}
+![`AOUSDOHtools` hex sticker. Created with R package `hexSticker` [@hexSticker2020].](figures/Hex_Sticker.jpg){width="258"}
 
 # **Statement of Need**
 
@@ -68,7 +68,7 @@ By automating scoring, recoding, and variable construction, `AOUSDOHtools` promo
 
 While other R packages offer general scoring utilities, `AOUSDOHtools` uniquely integrates the *All of Us* variable naming conventions, metadata harmonization, and privacy-preserving workflows.
 
-![**Figure 1.** Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].](figures/Functions_Map.png){width="800"}
+![Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].](figures/Functions_Map.png){width="800"}
 
 # **Installation**
 
@@ -141,6 +141,8 @@ We thank the *All of Us* Research Program and its participants for making this w
 We also acknowledge all the authors of the published user guide [@Koleck2024], whose work provided the conceptual and methodological foundation for scoring the Social Determinants of Health constructs implemented in `AOUSDOHtools`.
 
 We are grateful to the Comprehensive R Archive Network (CRAN) team for maintaining the infrastructure that supports open source software distribution and reproducibility in R. We also acknowledge GitHub for providing the collaborative platform used to develop, maintain, and share the source code for this package.
+
+We welcome feedback, feature suggestions, and collaboration ideas. If you’d like to share your thoughts or contribute, please contact Zhirui Deng at [zhd52\@pitt.edu](mailto:zhd52@pitt.edu){.email}, or open an issue/submit a pull request on GitHub.
 
 # **Conflict of Interest**
 
