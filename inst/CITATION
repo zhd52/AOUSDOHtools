@@ -1,0 +1,16 @@
+citHeader("To cite AOUSDOHtools, please use:")
+
+citEntry(
+  entry  = "Manual",
+  title  = "AOUSDOHtools: Analyzing AOU SDOH Survey Data",
+  author = personList(
+    person("Zhirui", "Deng"),
+    person("Theresa A.", "Koleck"),
+    person("Chen", "Zhang"),
+    person("Peter D.R.", "Higgins"),
+    person("Caitlin", "Dreisbach")
+  ),
+  year   = "2025",
+  note   = "R package version 1.0.4",
+  doi    = "10.32614/cran.package.aousdohtools"
+)

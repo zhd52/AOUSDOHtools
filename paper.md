@@ -42,8 +42,7 @@ The package is designed for use within the *All of Us* Researcher Workbench, a s
 
 The package is openly developed and maintained on GitHub and available through CRAN ([cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) and GitHub ([github.com/zhd52/AOUSDOHtools](https://github.com/zhd52/AOUSDOHtools)). It is intended to facilitate equitable and scalable research by making complex SDOH survey data accessible and analysis-ready for approved researchers working within the *All of Us* ecosystem.
 
-
--   **Figure 0:** `AOUSDOHtools` hex sticker. Created with R package `hexSticker` [@hexSticker2020].
+![**Figure 0.** `AOUSDOHtools` hex sticker. Created with R package `hexSticker` [@hexSticker2020].](figures/Hex_Sticker.jpg){width="258"}
 
 # **Statement of Need**
 
@@ -52,7 +51,6 @@ The package is openly developed and maintained on GitHub and available through C
 The *All of Us* Research Program ([allofus.nih.gov](https://www.allofus.nih.gov)), led by the National Institutes of Health, aims to create a large and diverse health database by enrolling over one million participants across the United States. The program supports research focused on individualized prevention, diagnosis, and treatment [@AllOfUsNIH2025].
 
 Participants provide data through self-reported surveys, electronic health records (EHR), physical measurements, wearable devices (e.g. FitBit), and biospecimen collection (e.g. urine and blood specimens), made available to approved researchers via the secure cloud-based Researcher Workbench ([researchallofus.org](https://www.researchallofus.org)) [@AllOfUsNEJM2019]. A major strength of *All of Us* is its explicit focus on health equity, particularly through the inclusion of historically underrepresented populations in biomedical research [@AllOfUsNIH2025].
-
 
 Despite these strengths, the complexity of the available data, especially the survey components, can present analytic challenges. Standardized and scalable tools are needed to support consistent data processing and analysis, but such tools are not included in the platform by default [@Grayson2022].
 
@@ -64,70 +62,25 @@ Transforming survey responses into meaningful constructs for research, such as s
 
 ## **Scoring Social Determinants of Health (SDOH) Constructs**
 
-The `AOUSDOHtools` R Package (@Deng2025; [cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) was developed to address this gap in available tools by implementing literature-informed scoring logic for 14 well-defined SDOH constructs (***Figure 1***). `AOUSDOHtools` builds upon a user guide developed by @Koleck2024 and includes constructs such as Neighborhood Cohesion, Social Support, and Perceived Stress, each assessed using standardized instruments. Please see @Koleck2024 for definitions and descriptions of the SDOH constructs and source instrument information. A total of 30 functions for scoring are available. Six of the constructs have one scoring option. Eight of the constructs have multiple scoring options. `AOUSDOHtools` is intended for use exclusively within the *All of Us* Researcher Workbench [@AllOfUsWorkbench2025] (Jupyter or Rstudio), respecting privacy and data governance regulations.
+The `AOUSDOHtools` R Package (@AOUSDOHtools2025; [cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) was developed to address this gap in available tools by implementing literature-informed scoring logic for 14 well-defined SDOH constructs (***Figure 1***). `AOUSDOHtools` builds upon a user guide developed by @Koleck2024 and includes constructs such as Neighborhood Cohesion, Social Support, and Perceived Stress, each assessed using standardized instruments. Please see @Koleck2024 for definitions and descriptions of the SDOH constructs and source instrument information. A total of 30 functions for scoring are available. Six of the constructs have one scoring option. Eight of the constructs have multiple scoring options. `AOUSDOHtools` is intended for use exclusively within the *All of Us* Researcher Workbench [@AllOfUsWorkbench2025] (Jupyter or Rstudio), respecting privacy and data governance regulations.
 
-By automating scoring, recoding, and variable construction, `AOUSDOHtools` promotes reproducibility, reduces coding burden, and makes SDOH constructs more accessible to health equity researchers. It, thereby, accelerates scalable, equity-driven population health research.
+By automating scoring, recoding, and variable construction, `AOUSDOHtools` promotes reproducibility, reduces coding burden, and makes SDOH constructs more accessible to health equity researchers. It, thereby, accelerates scalable, equity-driven population health research [@Koleck2024].
 
--   **Figure 1:** Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].
+While other R packages offer general scoring utilities, `AOUSDOHtools` uniquely integrates the *All of Us* variable naming conventions, metadata harmonization, and privacy-preserving workflows.
+
+![**Figure 1.** Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].](figures/Functions_Map.png){width="800"}
 
 # **Installation**
 
 The `AOUSDOHtools` package is available on CRAN ([cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) and GitHub ([github.com/zhd52/AOUSDOHtools](https://github.com/zhd52/AOUSDOHtools)). Users can install the stable release from CRAN or the development version from GitHub using the following commands in R [@Rcore2025; @devtools2022].
 
-
--   Install from CRAN:
-
-``` r
-install.packages("AOUSDOHtools")
-```
-
--   Install the latest development version from Github:
-
-``` r
-devtools::install_github("zhd52/AOUSDOHtools")
-```
-
--   After installation, load the package with:
-
-``` r
-library(AOUSDOHtools)
-```
-
 This package is intended to use SDOH Survey data from the *All of Us* Research Program. As these data are only accessible within the secure *All of Us* Researcher Workbench [@AllOfUsWorkbench2025], the package needs to be installed and executed within that environment. Both the Jupyter and RStudio interfaces provided by the Researcher Workbench support the use of this package for in-platform analysis. The package uses the `tidyverse` framework for efficient data manipulation and visualization [@tidyverse2023; @Wickham2019]. The package also provides detailed documentation on how each score is derived, along with descriptions and value ranges for all supported constructs.
 
-# **Example**
+# **Examples**
 
 After installation, users can apply `AOUSDOHtools` functions (***Figure 1***) directly to SDOH Survey data from the *All of Us* Research Program. In order to extract the SDOH data, a registered *All of Us* researcher would need to create a cohort using the cohort builder tool and select the premade concept set for the survey data. The concept set that includes the SDOH Survey data resides under “All Surveys” and then “Social Determinants of Health”. By selecting the cohort and the concept set, a registered user can preveiw the dataset prior to launching the analytic platform.
 
-The following example demonstrates how to compute Neighborhood Cohesion scores using a synthetic dataset that mimics the expected structure of the *All of Us* survey data.
-
--   Load the package:
-
-``` r
-library(AOUSDOHtools)
-```
-
--   Replace this with actual *All of Us* SDOH Survey data:
-
-``` r
-survey_df <- data.frame(
-         person_id = c(...),
-         question_concept_id = c(...),
-         answer_concept_id = c(...)
-    )
-```
-
--   Calculate Neighborhood Cohesion scores:
-
-``` r
-cohesion_scores <- calc_cohesion(survey_df)
-```
-
--   View Output:
-
-``` r
-head(cohesion_scores)
-```
+Detailed examples are available in the package vignette (`vignette("AOUSDOHtools_examples")`). Example 1 demonstrates how to compute Neighborhood Cohesion scores using a synthetic dataset that mimics the expected structure of the *All of Us* survey data.
 
 This workflow illustrates how raw concept-level responses from the *All of Us* data can be transformed into structured, construct-level scores. Functions for computing other SDOH constructs follow a similar structure. Users are encouraged to consult the package documentation for a complete list of scoring functions and usage details.
 
@@ -135,40 +88,9 @@ This workflow illustrates how raw concept-level responses from the *All of Us* d
 
 After computing individual construct scores using `AOUSDOHtools`, the resulting data frames can be combined into a single dataset for downstream analysis. Each scoring function returns a data frame indexed by `person_id`, which allows for merging using `purrr::reduce()` and `dplyr::full_join()` [@purrr2025; @dplyr2023].
 
-The following example demonstrates how to combine all 14 constructs and their sub-scores.
+Example 2 in the package vignette demonstrates how to combine all 14 constructs and their sub-scores. Full usage examples and additional workflows are also available in the package documentation on GitHub.
 
--   Load required packages:
-
-``` r
-library(dplyr)
-library(purrr)
-```
-
--   Create a list of all score data frames:
-
-``` r
-scores.list <- list(
-          # Neighborhood Cohesion
-         cohesion_scores,                  
-          # Neighborhood Disorder 
-         disorder_scores, physical_disorder_scores, social_disorder_scores,  
-             ...
-        )
-```
-
--   Merge all score outputs by person_id:
-
-``` r
-SDOH_scores <- reduce(scores.list, full_join, by = "person_id")
-```
-
--   Preview merged dataset:
-
-``` r
-head(SDOH_scores)
-```
-
-The resulting merged data frame provides a person-level summary of all available SDOH scores, ready for descriptive analysis or modeling. Full usage examples and additional workflows are available in the package documentation on GitHub.
+The resulting merged data frame provides a person-level summary of all available SDOH scores, ready for descriptive analysis or modeling. Participants missing responses are retained with NA values unless `na.rm = TRUE`, in which case incomplete rows are excluded.
 
 # **Development**
 

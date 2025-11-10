@@ -1,0 +1,72 @@
+---
+title: "AOUSDOHtools_examples"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{AOUSDOHtools_examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(AOUSDOHtools)
+library(purrr)
+library(dplyr)
+```
+
+```{r example1}
+# Example 1 - Calculating Neighborhood Cohesion Score
+
+## Note: This example is using a synthetic dataset that mimics the expected structure of the All of Us survey data, users should replace survey_df with actual All of Us SDOH Survey data. 
+
+### Create a sample survey data frame
+survey_df <- data.frame(
+  person_id = c(1, 1, 1, 1, 2, 2, 2, 2),
+  question_concept_id = c(40192463, 40192411, 40192499, 40192417,
+                          40192463, 40192411, 40192499, 40192417),
+  answer_concept_id = c(40192514, 40192455, 40192524, 40192408,
+                        40192514, 40192455, 40192422, 40192408)
+  )
+
+### Calculate Neighborhood Cohesion scores
+cohesion_scores <- calc_cohesion(survey_df)
+
+### View Output
+head(cohesion_scores)
+```
+
+```{r example2, eval=F}
+# Example 2 - Merging Resulting Scores
+
+## Note: After computing all the scores, users can merge the resulting scores together using the code below, which demonstrates how to combine all 14 constructs and their sub-scores. Participants missing responses are retained with NA values unless `na.rm = TRUE`, in which case incomplete rows are excluded. 
+
+### Create a list of all score data frames:
+scores.list <- list(
+  cohesion_scores,                                                       ### Neighborhood Cohesion
+  disorder_scores, physical_disorder_scores, social_disorder_scores,     ### Neighborhood Disorder 
+  density_scores, spa_scores, crime_safety_scores, nei_scores,           ### Neighborhood Environment
+  social_support_scores, ins_support_scores, emo_support_scores,         ### Social Support 
+  loneliness_scores,                                                     ### Loneliness
+  edd_situation_scores, edd_frequency_scores, edd_chronicity_scores,     ### Perceived Everyday Discrimination
+  hcd_ever_scores, hcd_count_scores, hcd_sum_scores, hcd_mean_scores,    ### Perceived Discrimination in Health Care Settings
+  food_insecurity_scores,                                                ### Food Insecurity
+  housing_insecurity_scores, num_moves_scores,                           ### Housing Insecurity / Instability
+  housing_quality_scores,                                                ### Housing Quality
+  stress_sum_scores, stress_category_scores,                             ### Perceived Stress
+  spirit_scores,                                                         ### Daily Spiritual Experiences
+  religious_attendance_scores,                                           ### Religious Service Attendance
+  other_language_scores, english_level_scores, english_proficient_scores ### English Proficiency
+)
+
+### Merge all score outputs by person_id
+SDOH_scores <- reduce(scores.list, full_join, by = "person_id")
+
+### Preview merged dataset
+head(SDOH_scores)
+```

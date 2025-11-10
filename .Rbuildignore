@@ -5,3 +5,10 @@
 ^\.github$
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
+^paper\.md$
+^paper\.bib$
+^apa\.csl$
+^figures$
+^RMed2025_AOUSDOHtools_slides\.pdf$
+^doc$
+^Meta$

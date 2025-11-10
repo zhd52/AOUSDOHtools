@@ -1,8 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -14,7 +9,7 @@ editor_options:
 
 <!-- badges: end -->
 
-<img src="man/figures/Hex_Sticker.jpg" width="30%" style="display: block; margin: auto;"/>
+<img src="figures/Hex_Sticker.jpg" width="30%" style="display: block; margin: auto;" />
 
 ## Overview
 
@@ -30,16 +25,21 @@ supporting AOU data analysis
 
 This package is developed in conjunction with a published user guide:
 
--   Theresa A Koleck, Caitlin Dreisbach, Chen Zhang, Susan Grayson,
-    Maichou Lor, Zhirui Deng, Alex Conway, Peter D R Higgins, Suzanne
-    Bakken, *User guide for Social Determinants of Health Survey data in
-    the All of Us Research Program*, Journal of the American Medical
-    Informatics Association, Volume 31, Issue 12, December 2024, Pages
-    3032–3041, <https://doi.org/10.1093/jamia/ocae214>.
+- Theresa A Koleck, Caitlin Dreisbach, Chen Zhang, Susan Grayson,
+  Maichou Lor, Zhirui Deng, Alex Conway, Peter D R Higgins, Suzanne
+  Bakken, *User guide for Social Determinants of Health Survey data in
+  the All of Us Research Program*, Journal of the American Medical
+  Informatics Association, Volume 31, Issue 12, December 2024, Pages
+  3032–3041, <https://doi.org/10.1093/jamia/ocae214>.
 
 The package enables users to calculate health and well-being scores for
 14 key social determinants of health constructs assessed in the *All of
 Us* Social Determinants of Health Survey (AOUSDOH).
+
+Due to data privacy and security requirements of the *All of Us*
+Research Program, `AOUSDOHtools` is recommended for use **within the
+managed Jupyter environment** provided by the All of Us Researcher
+Workbench.
 
 **Supported Constructs and Functions**
 
@@ -114,6 +114,14 @@ session:
 library(AOUSDOHtools)
 library(purrr)
 library(dplyr)
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
 
 # Example: Calculating Neighborhood Cohesion Score
 
@@ -166,3 +174,13 @@ scores.list <- list(
 SDOH_scores <- reduce(scores.list, full_join, by = 'person_id')
 head(SDOH_scores)
 ```
+
+Participants missing responses are retained with NA values unless
+`na.rm = TRUE`, in which case incomplete rows are excluded.
+
+## Contribution
+
+We welcome feedback, feature suggestions, and collaboration ideas. If
+you’d like to share your thoughts or contribute, please contact Zhirui
+Deng at <zhd52@pitt.edu>, or open an issue/submit a pull request on
+GitHub.
