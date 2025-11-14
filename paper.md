@@ -28,7 +28,7 @@ affiliations:
     index: 3
   - name: Goergen Institute for Data Science, University of Rochester, Rochester, NY, USA
     index: 4
-date: 31 August 2025
+date: 14 November 2025
 bibliography: paper.bib
 csl: apa.csl
 journal: JOSS
@@ -62,11 +62,11 @@ Transforming survey responses into meaningful constructs for research, such as s
 
 ## **Scoring Social Determinants of Health (SDOH) Constructs**
 
-The `AOUSDOHtools` R Package (@AOUSDOHtools2025; [cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) was developed to address this gap in available tools by implementing literature-informed scoring logic for 14 well-defined SDOH constructs (***Figure 1***). `AOUSDOHtools` builds upon a user guide developed by @Koleck2024 and includes constructs such as Neighborhood Cohesion, Social Support, and Perceived Stress, each assessed using standardized instruments. Please see @Koleck2024 for definitions and descriptions of the SDOH constructs and source instrument information. A total of 30 functions for scoring are available. Six of the constructs have one scoring option. Eight of the constructs have multiple scoring options. `AOUSDOHtools` is intended for use exclusively within the *All of Us* Researcher Workbench [@AllOfUsWorkbench2025] (Jupyter or Rstudio), respecting privacy and data governance regulations.
+The `AOUSDOHtools` R Package (@AOUSDOHtools2025; [cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) was developed to address the absence of standardized tools for processing and scoring the *All of Us* SDOH Survey. It operationalizes literature-informed scoring logic for 14 SDOH constructs (***Figure 1***), such as Neighborhood Cohesion, Social Support, and Perceived Stress. Each construct includes well-defined item groupings, reverse-coding procedures, and aggregation rules defined in the *All of Us* SDOH User Guide [@Koleck2024]. The package includes 30 functions that automate scoring across these constructs, enabling reproducible and scalable analyses within the *All of Us* Researcher Workbench [@AllOfUsWorkbench2025]. Six of the constructs have one scoring option. Eight of the constructs have multiple scoring options. `AOUSDOHtools` is intended for use exclusively within the *All of Us* Researcher Workbench (Jupyter or Rstudio), respecting privacy and data governance regulations.
 
-By automating scoring, recoding, and variable construction, `AOUSDOHtools` promotes reproducibility, reduces coding burden, and makes SDOH constructs more accessible to health equity researchers. It, thereby, accelerates scalable, equity-driven population health research [@Koleck2024].
+Several R packages provide general scoring or psychometric utilities, such as `psych` [@psych2025], `PROscorer` [@PROscorer2023], and `scorecard` [@scorecard2025], but these are designed for use across a wide range of datasets and do not implement the unique structure of *All of Us* data. In contrast, `AOUSDOHtools` incorporates the *All of Us* variable naming conventions, metadata alignment, and privacy-preserving workflows required by the controlled Workbench environment.
 
-While other R packages offer general scoring utilities, `AOUSDOHtools` uniquely integrates the *All of Us* variable naming conventions, metadata harmonization, and privacy-preserving workflows.
+This package builds directly upon the *All of Us* SDOH User Guide [@Koleck2024], which provides the conceptual and methodological foundation for scoring SDOH constructs within the *All of Us* data ecosystem. The guide details the origin and purpose of each construct, specifies validated source instruments (e.g., Everyday Discrimination Scale, Perceived Stress Scale), defines item inclusion and reverse-coding logic, and outlines the computation of both subscale and composite scores. `AOUSDOHtools` translates these specifications into executable R functions that enable consistent, transparent, and reproducible SDOH scoring within the secure *All of Us* Researcher Workbench. By automating data cleaning, recoding, and variable construction, `AOUSDOHtools` promotes reproducibility, reduces coding burden, and makes complex survey constructs more accessible for health equity research, thereby accelerating scalable, population-level analyses within the *All of Us* program.
 
 ![Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].](figures/Functions_Map.png){width="800"}
 
@@ -99,6 +99,8 @@ The resulting merged data frame provides a person-level summary of all available
 As the *All of Us* Research Program continues to evolve, with ongoing updates to the data model, survey content, and release versions, this package will be actively maintained to remain consistent with changes to the SDOH Survey. Substantial revisions to item content, concept identifiers, or scoring procedures may require corresponding updates to package functions.
 
 The package is openly developed on GitHub, where users can report issues, request new features, and contribute to its development. Researchers are encouraged to review the package version and documentation to ensure compatibility with the specific release of the *All of Us* dataset they are using.
+
+We welcome feedback, feature suggestions, and collaboration ideas. If you’d like to share your thoughts or contribute, please contact Zhirui Deng at [zhd52\@pitt.edu](mailto:zhd52@pitt.edu){.email}, or open an issue/submit a pull request on GitHub.
 
 # **Author Contributions**
 
@@ -141,8 +143,6 @@ We thank the *All of Us* Research Program and its participants for making this w
 We also acknowledge all the authors of the published user guide [@Koleck2024], whose work provided the conceptual and methodological foundation for scoring the Social Determinants of Health constructs implemented in `AOUSDOHtools`.
 
 We are grateful to the Comprehensive R Archive Network (CRAN) team for maintaining the infrastructure that supports open source software distribution and reproducibility in R. We also acknowledge GitHub for providing the collaborative platform used to develop, maintain, and share the source code for this package.
-
-We welcome feedback, feature suggestions, and collaboration ideas. If you’d like to share your thoughts or contribute, please contact Zhirui Deng at [zhd52\@pitt.edu](mailto:zhd52@pitt.edu){.email}, or open an issue/submit a pull request on GitHub.
 
 # **Conflict of Interest**
 
