@@ -20,15 +20,15 @@ authors:
     orcid: 0000-0003-3964-3161
     affiliation: "2, 4"
 affiliations:
-  - name: School of Nursing, University of Pittsburgh, Pittsburgh, PA, USA
+  - name: School of Nursing, University of Pittsburgh, Pittsburgh, PA, United States
     index: 1
-  - name: School of Nursing, University of Rochester, Rochester, NY, USA
+  - name: School of Nursing, University of Rochester, Rochester, NY, United States
     index: 2
-  - name: School of Medicine, University of Michigan, Ann Arbor, MI, USA
+  - name: School of Medicine, University of Michigan, Ann Arbor, MI, United States
     index: 3
-  - name: Goergen Institute for Data Science, University of Rochester, Rochester, NY, USA
+  - name: Goergen Institute for Data Science, University of Rochester, Rochester, NY, United States
     index: 4
-date: 14 November 2025
+date: 1 December 2025
 bibliography: paper.bib
 csl: apa.csl
 journal: JOSS
@@ -42,7 +42,7 @@ The package is designed for use within the *All of Us* Researcher Workbench, a s
 
 The package is openly developed and maintained on GitHub and available through CRAN ([cran.r-project.org/package=AOUSDOHtools](https://cran.r-project.org/package=AOUSDOHtools)) and GitHub ([github.com/zhd52/AOUSDOHtools](https://github.com/zhd52/AOUSDOHtools)). It is intended to facilitate equitable and scalable research by making complex SDOH survey data accessible and analysis-ready for approved researchers working within the *All of Us* ecosystem.
 
-![`AOUSDOHtools` hex sticker. Created with R package `hexSticker` [@hexSticker2020].](figures/Hex_Sticker.jpg){width="258"}
+![`AOUSDOHtools` hex sticker. Created with R package `hexSticker` [@hexSticker2020].](figures/Hex_Sticker.jpg){width="500"}
 
 # **Statement of Need**
 
@@ -68,7 +68,7 @@ Several R packages provide general scoring or psychometric utilities, such as `p
 
 This package builds directly upon the *All of Us* SDOH User Guide [@Koleck2024], which provides the conceptual and methodological foundation for scoring SDOH constructs within the *All of Us* data ecosystem. The guide details the origin and purpose of each construct, specifies validated source instruments (e.g., Everyday Discrimination Scale, Perceived Stress Scale), defines item inclusion and reverse-coding logic, and outlines the computation of both subscale and composite scores. `AOUSDOHtools` translates these specifications into executable R functions that enable consistent, transparent, and reproducible SDOH scoring within the secure *All of Us* Researcher Workbench. By automating data cleaning, recoding, and variable construction, `AOUSDOHtools` promotes reproducibility, reduces coding burden, and makes complex survey constructs more accessible for health equity research, thereby accelerating scalable, population-level analyses within the *All of Us* program.
 
-![Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].](figures/Functions_Map.png){width="800"}
+![Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].](figures/Functions_Map.png){width="2000"}
 
 # **Installation**
 
@@ -78,7 +78,7 @@ This package is intended to use SDOH Survey data from the *All of Us* Research P
 
 # **Examples**
 
-After installation, users can apply `AOUSDOHtools` functions (***Figure 2***) directly to SDOH Survey data from the *All of Us* Research Program. In order to extract the SDOH data, a registered *All of Us* researcher would need to create a cohort using the cohort builder tool and select the premade concept set for the survey data. The concept set that includes the SDOH Survey data resides under “All Surveys” and then “Social Determinants of Health”. By selecting the cohort and the concept set, a registered user can preveiw the dataset prior to launching the analytic platform.
+After installation, users can apply `AOUSDOHtools` functions (***Figure 2***) directly to SDOH Survey data from the *All of Us* Research Program. In order to extract the SDOH data, a registered *All of Us* researcher would need to create a cohort using the cohort builder tool and select the premade concept set for the survey data. The concept set that includes the SDOH Survey data resides under “All Surveys” and then “Social Determinants of Health”. By selecting the cohort and the concept set, a registered user can preview the dataset prior to launching the analytic platform.
 
 Detailed examples are available in the package vignette (`vignette("AOUSDOHtools_examples")`). Example 1 demonstrates how to compute Neighborhood Cohesion scores using a synthetic dataset that mimics the expected structure of the *All of Us* survey data.
 
