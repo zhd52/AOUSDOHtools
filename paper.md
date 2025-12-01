@@ -68,7 +68,7 @@ Several R packages provide general scoring or psychometric utilities, such as `p
 
 This package builds directly upon the *All of Us* SDOH User Guide [@Koleck2024], which provides the conceptual and methodological foundation for scoring SDOH constructs within the *All of Us* data ecosystem. The guide details the origin and purpose of each construct, specifies validated source instruments (e.g., Everyday Discrimination Scale, Perceived Stress Scale), defines item inclusion and reverse-coding logic, and outlines the computation of both subscale and composite scores. `AOUSDOHtools` translates these specifications into executable R functions that enable consistent, transparent, and reproducible SDOH scoring within the secure *All of Us* Researcher Workbench. By automating data cleaning, recoding, and variable construction, `AOUSDOHtools` promotes reproducibility, reduces coding burden, and makes complex survey constructs more accessible for health equity research, thereby accelerating scalable, population-level analyses within the *All of Us* program.
 
-![Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].](figures/Functions_Map.png){width="2000"}
+![Overview of `AOUSDOHtools` functions linked to Social Determinant of Health constructs [@Koleck2024]. Created with R packages `DiagrammeR`, `DiagrammeRsvg`, and `rsvg` [@DiagrammeR2024; @DiagrammeRsvg2016; @rsvg2025].](figures/Functions_Map.png){width="1600"}
 
 # **Installation**
 
