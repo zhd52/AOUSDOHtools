@@ -17,6 +17,10 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
+[![CRAN status](https://www.r-pkg.org/badges/version/AOUSDOHtools)](https://CRAN.R-project.org/package=AOUSDOHtools)
+
+[![JOSS](https://joss.theoj.org/papers/10.21105/joss.09306/status.svg)](https://doi.org/10.21105/joss.09306)
+
 [![R-CMD-check](https://github.com/zhd52/AOUSDOHtools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zhd52/AOUSDOHtools/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
